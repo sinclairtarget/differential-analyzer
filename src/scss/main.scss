@@ -1,0 +1,51 @@
+@import 'fonts';
+@import 'text';
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    padding: 16px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
+        margin-right: 16px;
+    }
+}
+
+main .title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+div.intro {
+    margin-bottom: 6rem;
+}
+
+div.container {
+    background-color: #333;
+    height: 600px;
+}
+
+footer {
+    padding: 3rem;
+    text-align: center;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}

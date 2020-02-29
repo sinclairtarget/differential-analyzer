@@ -1,0 +1,47 @@
+@import 'constants';
+@import 'colors';
+
+body {
+    font-size: 1.6rem;
+    color: $heading-text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 6rem;
+    margin-bottom: 4rem;
+}
+
+header i {
+    font-size: 2.6rem;
+}
+
+main .title {
+    max-width: $max-text-width;
+}
+
+main p {
+    line-height: 1.8;
+    max-width: $max-text-width;
+    margin: auto;
+
+    &:not(:last-child) {
+        margin-bottom: 2.4rem;;
+    }
+}
+
+a, a:visited, a:active {
+    color: inherit;
+}
+
+a:hover {
+    color: $interactable-hover-color;
+}
+
+footer {
+    font-size: 1.4rem;
+    color: $faded-text-color;
+}
