@@ -20,12 +20,13 @@ const PADDING = {
 const X_INTERVAL = [0, 160];
 const Y_INTERVAL = [0, 90];
 
-export default class InputChart {
-  constructor(x, y, width, height) {
+export default class Chart {
+  constructor(x, y, width, height, f) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
+    this.f = f;
     this.dim = new Dimensions(this.width, this.height, MARGIN, PADDING);
 
     this.xScale = d3.scaleLinear()
@@ -57,10 +58,6 @@ export default class InputChart {
     plot.append('path')
         .attr('d', curveFunc(data))
         .attr('class', 'curve');
-  }
-
-  f(x) {
-    return 0.0035 * x ** 2;
   }
 
   calcData(xInterval, yInterval, f) {

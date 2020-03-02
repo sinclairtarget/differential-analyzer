@@ -1,14 +1,15 @@
 import "../scss/main.scss";
 
 import * as d3 from 'd3';
-import InputChart from './input-chart';
+import Chart from './chart';
 
-const INPUT_CHART_WIDTH = 426;
-const INPUT_CHART_HEIGHT = 240;
+const CHART_WIDTH = 426;
+const CHART_HEIGHT = 240;
 
 const app = window.app = {
   root: null,
-  input: new InputChart(0, 0, INPUT_CHART_WIDTH, INPUT_CHART_HEIGHT)
+  input: new Chart(0, 0, CHART_WIDTH, CHART_HEIGHT, (x) => 0.0035 * x ** 2),
+  output: new Chart(CHART_WIDTH, 0, CHART_WIDTH, CHART_HEIGHT, (x) => -0.0035 * x ** 2 + 90)
 };
 
 app.start = function() {
@@ -19,6 +20,7 @@ app.start = function() {
 app.setUp = function() {
   this.root = d3.select('#svg-box');
   this.input.setUp(this.root);
+  this.output.setUp(this.root);
 };
 
 window.onload = (ev) => {
