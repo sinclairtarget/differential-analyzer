@@ -5,18 +5,12 @@ import * as util from './util.js';
  * The background for a chart/graph. Draws axes and grid lines.
  */
 export default class ChartArea {
-  constructor(x, y, dimensions, xInterval, yInterval) {
+  constructor(x, y, dimensions, xScale, yScale) {
     this.x = x;
     this.y = y;
     this.dim = dimensions;
-
-    this.xScale = d3.scaleLinear()
-                    .domain(xInterval)
-                    .range([0, this.dim.plotWidth()]);
-
-    this.yScale = d3.scaleLinear()
-                    .domain(yInterval)
-                    .range([this.dim.plotHeight(), 0]);
+    this.xScale = xScale;
+    this.yScale = yScale;
 
     this.group = null;
     this.panel = null;
@@ -39,9 +33,6 @@ export default class ChartArea {
                     .attr('transform', util.transl(this.dim.padding.left,
                                                    this.dim.padding.top))
                     .attr('class', 'plot');
-
-    this.drawGrid();
-    this.drawAxes();
   }
 
   drawAxes() {

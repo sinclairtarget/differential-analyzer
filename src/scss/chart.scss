@@ -6,4 +6,10 @@
     .grid {
         color: $chart-area-grid-color;
     }
+
+    .curve {
+        stroke: $chart-curve-color;
+        stroke-width: 2;
+        fill: none;
+    }
 }
