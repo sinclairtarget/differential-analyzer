@@ -1,0 +1,9 @@
+@import 'colors';
+
+.chart-area {
+    color: $chart-area-color;
+
+    .grid {
+        color: $chart-area-grid-color;
+    }
+}

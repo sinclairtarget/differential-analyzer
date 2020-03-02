@@ -1,5 +1,6 @@
 @import 'fonts';
 @import 'text';
+@import 'chart';
 
 html, body {
     margin: 0;
@@ -38,6 +39,11 @@ div.intro {
 div.container {
     background-color: #333;
     height: 600px;
+}
+
+div.container div.positioner {
+    max-width: 1200px;
+    margin: auto;
 }
 
 footer {
