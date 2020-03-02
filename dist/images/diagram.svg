@@ -5,15 +5,15 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg8"
+   id="svg878"
    version="1.1"
-   viewBox="0 0 129.7894 126.7656"
-   height="126.7656mm"
-   width="129.7894mm">
+   viewBox="0 0 297 158.75"
+   height="600"
+   width="1122.5197">
   <defs
-     id="defs2" />
+     id="defs872" />
   <metadata
-     id="metadata5">
+     id="metadata875">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -25,18 +25,18 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-41.505591,-93.57704)"
-     id="turntable">
+     transform="translate(0,-138.25)"
+     id="layer1">
     <ellipse
-       ry="42.829803"
-       rx="44.341705"
-       cy="156.95984"
-       cx="106.40029"
-       id="path20"
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.1059916;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
+       ry="45.735123"
+       rx="48.947918"
+       cy="221.40475"
+       cx="146.84375"
+       id="path1436"
+       style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:0.52916667;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
     <path
-       id="path846"
-       d="m 106.70649,199.45946 -0.0945,-11.1503"
-       style="fill:none;stroke:#000000;stroke-width:0.86500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       id="path1442"
+       d="M 147.59971,267.13989 V 248.61905"
+       style="fill:none;stroke:#ffffff;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>
