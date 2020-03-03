@@ -17,24 +17,23 @@ const PADDING = {
   left: 20
 };
 
-const X_INTERVAL = [0, 160];
-const Y_INTERVAL = [0, 90];
-
 export default class Chart {
-  constructor(x, y, width, height, f) {
+  constructor(x, y, width, height, xInterval, yInterval) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
-    this.f = f;
     this.dim = new Dimensions(this.width, this.height, MARGIN, PADDING);
 
+    this.xInterval = xInterval;
+    this.yInterval = yInterval;
+
     this.xScale = d3.scaleLinear()
-                    .domain(X_INTERVAL)
+                    .domain(this.xInterval)
                     .range([0, this.dim.plotWidth()]);
 
     this.yScale = d3.scaleLinear()
-                    .domain(Y_INTERVAL)
+                    .domain(this.yInterval)
                     .range([this.dim.plotHeight(), 0]);
 
     this.area = new ChartArea(this.x, this.y, this.dim,
@@ -45,24 +44,25 @@ export default class Chart {
     this.area.setUp(parent);
     this.area.drawGrid();
     this.area.drawAxes();
-    this.drawCurve(this.area.plot,
-                   this.calcData(X_INTERVAL, Y_INTERVAL, this.f));
   }
 
-  drawCurve(plot, data) {
+  // Expects data to be a list of objects with x, y properties
+  drawCurve(data) {
     let curveFunc = d3.line()
                       .curve(d3.curveBasis)
                       .x((d) => this.xScale(d.x))
                       .y((d) => this.yScale(d.y));
 
-    plot.append('path')
-        .attr('d', curveFunc(data))
-        .attr('class', 'curve');
+    let dataToPlot = this.cullData(data, this.xInterval, this.yInterval);
+    this.area.plot.append('path')
+                  .attr('d', curveFunc(dataToPlot))
+                  .attr('class', 'curve');
   }
 
-  calcData(xInterval, yInterval, f) {
-    let [start, stop] = xInterval;
-    let raw = util.range(start, stop).map((x) => { return {x: x, y: f(x)}; });
-    return raw.filter(d => d.y >= yInterval[0] && d.y <= yInterval[1]);
+  cullData(data, xInterval, yInterval) {
+    return data.filter(d => {
+      return d.y >= yInterval[0] && d.y <= yInterval[1]
+        && d.x >= xInterval[0] && d.x <= xInterval[1]
+    });
   }
 }
