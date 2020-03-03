@@ -7,10 +7,13 @@ import * as machine from './machine';
 const CHART_WIDTH = 426;
 const CHART_HEIGHT = 240;
 
+const ANIMATION_PERIOD_MS = 15000;
+
 const app = window.app = {
   root: null,
   input: new Chart(0, 0, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 10]),
-  output: new Chart(CHART_WIDTH, 0, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 600])
+  output: new Chart(CHART_WIDTH, 0, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 600]),
+  F_data: null
 };
 
 function F(x) {
@@ -27,13 +30,20 @@ app.setUp = function() {
   this.input.setUp(this.root);
   this.output.setUp(this.root);
 
-  let F_data = machine.stream_of_x(160).map(x => {
+  this.F_data = machine.stream_of_x(160).map(x => {
     return { x: x, y: F(x) }
   });
-  this.input.drawCurve(F_data);
+  this.input.drawCurve(this.F_data);
 
-  let f_data = machine.integrate(F_data);
-  this.output.drawCurve(f_data);
+  app.reset();
+};
+
+app.reset = function() {
+  console.log('Reset!');
+  let f_data = machine.integrate(this.F_data);
+  this.output.drawCurve(f_data, ANIMATION_PERIOD_MS);
+
+  window.setTimeout(() => { app.reset(); }, ANIMATION_PERIOD_MS);
 };
 
 window.onload = (ev) => {

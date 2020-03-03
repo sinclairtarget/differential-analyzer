@@ -38,6 +38,7 @@ export default class Chart {
 
     this.area = new ChartArea(this.x, this.y, this.dim,
                               this.xScale, this.yScale);
+    this.path = null;
   }
 
   setUp(parent) {
@@ -47,16 +48,30 @@ export default class Chart {
   }
 
   // Expects data to be a list of objects with x, y properties
-  drawCurve(data) {
+  drawCurve(data, animDuration = 0) {
     let curveFunc = d3.line()
                       .curve(d3.curveBasis)
                       .x((d) => this.xScale(d.x))
                       .y((d) => this.yScale(d.y));
 
     let dataToPlot = this.cullData(data, this.xInterval, this.yInterval);
-    this.area.plot.append('path')
-                  .attr('d', curveFunc(dataToPlot))
-                  .attr('class', 'curve');
+
+    if (this.path == null) {
+      this.path = this.area.plot.append('path')
+                                .attr('d', curveFunc(dataToPlot))
+                                .attr('class', 'curve');
+    }
+
+    if (animDuration > 0) {
+      let len = this.path.node().getTotalLength();
+      this.path.attr('stroke-dasharray', len + ' ' + len)
+               .attr('stroke-dashoffset', len)
+               .interrupt()
+               .transition()
+               .duration(animDuration)
+               .ease(d3.easeLinear)
+               .attr('stroke-dashoffset', 0);
+    }
   }
 
   cullData(data, xInterval, yInterval) {
