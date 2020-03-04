@@ -74,4 +74,14 @@ export default class ChartArea {
              .attr('class', 'grid')
              .call(yGrid);
   }
+
+  drawTitle(titleText) {
+    this.title = this.panel.append('text')
+                           .attr('x', this.dim.plotWidth() / 2 +
+                                      this.dim.margin.left + this.dim.padding.left)
+                           .attr('y', this.dim.panelHeight() + 14)
+                           .attr('text-anchor', 'middle')
+                           .attr('class', 'chart-title')
+                           .text(titleText);
+  }
 }

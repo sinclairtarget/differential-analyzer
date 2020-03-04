@@ -9,7 +9,7 @@ const ANIMATION_PERIOD_MS = 15000;
 
 const app = window.app = {
   root: null,
-  track: new Track(0, 300),
+  track: new Track(0, 280),
   F_data: null
 };
 
@@ -50,6 +50,13 @@ app.update = function(inputData, outputData) {
   window.setTimeout(() => {
     app.update(inputData, outputData);
   }, ANIMATION_PERIOD_MS);
+
+//  this.root.select('g.turntable')
+//           .attr('transform', 'rotate(0, 400, 200)')
+//           .transition()
+//           .duration(ANIMATION_PERIOD_MS)
+//           .ease(d3.easeLinear)
+//           .attr('transform', 'rotate(90, 800, 200)');
 };
 
 window.onload = (ev) => {

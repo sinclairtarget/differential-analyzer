@@ -4,7 +4,7 @@ import Eye from './eye';
 import * as util from './util';
 
 const CHART_WIDTH = 400;
-const CHART_HEIGHT = 240;
+const CHART_HEIGHT = 260;
 const FUDGE = 10;
 
 const INPUT_Y_INTERVAL = [0, 10];
@@ -16,9 +16,9 @@ export default class Track {
     this.x = x;
     this.y = y;
     this.input = new Chart(0, 0, CHART_WIDTH, CHART_HEIGHT,
-                           [0, 100], INPUT_Y_INTERVAL);
+                           [0, 100], INPUT_Y_INTERVAL, 'f(x)');
     this.output = new Chart(CHART_WIDTH, 0, CHART_WIDTH, CHART_HEIGHT,
-                            [0, 100], [0, 600]);
+                            [0, 100], [0, 600], 'F(x)');
 
     this.baseGroup = null;
     this.chartGroup = null;

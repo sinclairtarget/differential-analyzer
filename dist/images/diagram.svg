@@ -36,33 +36,64 @@
        style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
   </g>
   <g
+     id="layer5">
+    <text
+       class="label"
+       id="text1600"
+       y="275.50391"
+       x="297.42773"
+       xml:space="preserve"><tspan
+         id="tspan1598"
+         y="275.50391"
+         x="297.42773"><tspan
+           id="tspan1596"
+           y="275.50391"
+           x="297.42773">Input</tspan></tspan></text>
+    <text
+       class="label"
+       id="text1606"
+       y="275.50391"
+       x="811.68945"
+       xml:space="preserve"><tspan
+         id="tspan1604"
+         y="275.50391"
+         x="811.68945"><tspan
+           id="tspan1602"
+           y="275.50391"
+           x="811.68945">Output</tspan></tspan></text>
+  </g>
+  <g
      class="input-eye"
      id="input-eye">
     <path
        id="path1358"
-       d="M 9.581028,224.11978 8.843562,0.21847063"
+       d="M 8.5708755,223.86724 8.843562,0.21847063"
        style="fill:#b3b3b3;stroke:#cccccc;stroke-width:2.20238137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686" />
-    <circle
-       r="5"
-       cy="229.20247"
-       cx="9.4935484"
-       id="path1327"
-       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
-    <path
-       transform="rotate(0.16439626,73673.487,-132280.15)"
-       d="m 397.80061,440.17856 -2.5,1.44337 v -2.88675 z"
-       id="path1335"
-       style="fill:#ffffff;fill-opacity:0.96085409;stroke:#ffffff;stroke-width:0.33333334;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
-    <path
-       transform="matrix(-0.99999588,0.00286925,0.00286925,0.99999588,398.2979,-211.84014)"
-       d="m 397.80061,440.17856 -2.5,1.44337 v -2.88675 z"
-       id="path1335-2"
-       style="fill:#ffffff;fill-opacity:0.96085409;stroke:#ffffff;stroke-width:0.33333334;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
-    <path
-       transform="rotate(90.164396,305.12392,144.98022)"
-       d="m 397.80061,440.17856 -2.5,1.44337 v -2.88675 z"
-       id="path1335-9"
-       style="fill:#ffffff;fill-opacity:0.96085409;stroke:#ffffff;stroke-width:0.33333334;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
+    <g
+       transform="translate(-0.98984745,-0.80986178)"
+       id="g1876">
+      <circle
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1"
+         id="path1327"
+         cx="9.4935484"
+         cy="229.20247"
+         r="5" />
+      <path
+         style="fill:#ffffff;fill-opacity:0.96085409;stroke:#ffffff;stroke-width:0.33333334;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1"
+         id="path1335"
+         d="m 397.80061,440.17856 -2.5,1.44337 v -2.88675 z"
+         transform="rotate(0.16439626,73673.487,-132280.15)" />
+      <path
+         style="fill:#ffffff;fill-opacity:0.96085409;stroke:#ffffff;stroke-width:0.33333334;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1"
+         id="path1335-2"
+         d="m 397.80061,440.17856 -2.5,1.44337 v -2.88675 z"
+         transform="matrix(-0.99999588,0.00286925,0.00286925,0.99999588,398.2979,-211.84014)" />
+      <path
+         style="fill:#ffffff;fill-opacity:0.96085409;stroke:#ffffff;stroke-width:0.33333334;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1"
+         id="path1335-9"
+         d="m 397.80061,440.17856 -2.5,1.44337 v -2.88675 z"
+         transform="rotate(90.164396,305.12392,144.98022)" />
+    </g>
   </g>
   <g
      id="layer3">
@@ -146,53 +177,5 @@
        cx="590"
        id="path1245"
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
-  </g>
-  <g
-     id="layer6">
-    <text
-       transform="rotate(-31.937356)"
-       id="text2987"
-       y="287.24734"
-       x="194.57388"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         id="tspan2985"
-         y="287.24734"
-         x="194.57388"><tspan
-           id="tspan2983"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'TeX Gyre Schola Math';-inkscape-font-specification:'TeX Gyre Schola Math, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#b3b3b3;fill-opacity:1"
-           y="287.24734"
-           x="194.57388">F(x)</tspan></tspan></text>
-    <path
-       id="path2977"
-       d="m 393.5258,82.525134 c 0,0 34.08893,-26.078747 53.21694,-6.245274"
-       style="fill:none;stroke:#b3b3b3;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       transform="rotate(-9.5730992,414.85703,119.49761)"
-       d="m 454.82118,91.893267 c -9.18558,-3.93668 -9.18558,-3.93668 -1.18353,-9.923291 8.00206,-5.986612 8.00206,-5.986612 9.18559,3.936679 1.18353,9.923291 1.18353,9.923291 -8.00206,5.986612 z"
-       id="path2981"
-       style="fill:none;fill-opacity:1;stroke:#b3b3b3;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:0.99215686" />
-    <text
-       transform="rotate(24.944022)"
-       id="text3061"
-       y="-230.51733"
-       x="689.76166"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'TeX Gyre Schola Math';-inkscape-font-specification:'TeX Gyre Schola Math, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#b3b3b3;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         id="tspan3059"
-         y="-230.51733"
-         x="689.76166"><tspan
-           id="tspan3057"
-           y="-230.51733"
-           x="689.76166">f(x)</tspan></tspan></text>
-    <path
-       id="path3063"
-       d="m 806.96584,108.13617 c 0,0 66.30546,13.7215 51.19531,50.03785"
-       style="fill:none;stroke:#b3b3b3;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       transform="rotate(58.125018,587.62317,483.82959)"
-       d="m 454.82118,91.893267 c -9.18558,-3.93668 -9.18558,-3.93668 -1.18353,-9.923291 8.00206,-5.986612 8.00206,-5.986612 9.18559,3.936679 1.18353,9.923291 1.18353,9.923291 -8.00206,5.986612 z"
-       id="path2981-9"
-       style="fill:none;fill-opacity:1;stroke:#b3b3b3;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:0.99215686" />
   </g>
 </svg>

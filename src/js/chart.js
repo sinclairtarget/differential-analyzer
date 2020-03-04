@@ -13,12 +13,12 @@ const MARGIN = {
 const PADDING = {
   top: 20,
   right: 0,
-  bottom: 20,
+  bottom: 40,
   left: 20
 };
 
 export default class Chart {
-  constructor(x, y, width, height, xInterval, yInterval) {
+  constructor(x, y, width, height, xInterval, yInterval, title) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -36,6 +36,8 @@ export default class Chart {
                     .domain(this.yInterval)
                     .range([this.dim.plotHeight(), 0]);
 
+    this.title = title;
+
     this.area = new ChartArea(this.x, this.y, this.dim,
                               this.xScale, this.yScale);
     this.path = null;
@@ -45,6 +47,7 @@ export default class Chart {
     this.area.setUp(parent);
     this.area.drawGrid();
     this.area.drawAxes();
+    this.area.drawTitle(this.title);
   }
 
   // Expects data to be a list of objects with x, y properties

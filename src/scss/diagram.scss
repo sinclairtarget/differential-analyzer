@@ -19,3 +19,18 @@ svg .eye {
     stroke-width: 2;
     fill: none;
 }
+
+svg text {
+    fill: $chart-curve-color;
+    font-family: 'routed-gothic', Georgia, serif;
+
+    &.label {
+        font-size: 3rem;
+        font-style: bold;
+    }
+
+    &.chart-title {
+        font-size: 3.4rem;
+        font-style: bold;
+    }
+}
