@@ -2,18 +2,14 @@ import "../scss/main.scss";
 
 import * as d3 from 'd3';
 import SVGInject from '@iconfu/svg-inject';
-import Chart from './chart';
 import * as machine from './machine';
-
-const CHART_WIDTH = 426;
-const CHART_HEIGHT = 240;
+import Track from './track';
 
 const ANIMATION_PERIOD_MS = 15000;
 
 const app = window.app = {
   root: null,
-  input: new Chart(0, 300, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 10]),
-  output: new Chart(CHART_WIDTH + 40, 300, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 600]),
+  track: new Track(0, 300),
   F_data: null
 };
 
@@ -37,27 +33,25 @@ app.start = function() {
 
 app.setUp = function() {
   this.root = d3.select('#diagram');
-  console.log(this.root);
-  this.input.setUp(this.root);
-  this.output.setUp(this.root);
+  this.track.setUp(this.root);
 
   this.F_data = machine.stream_of_x(160).map(x => {
     return { x: x, y: F(x) }
   });
-  this.input.drawCurve(this.F_data);
 
-  app.reset();
+  this.f_data = machine.integrate(this.F_data);
+
+  app.update(this.F_data, this.f_data);
 };
 
-app.reset = function() {
-  console.log('Reset!');
-  let f_data = machine.integrate(this.F_data);
-  this.output.drawCurve(f_data, ANIMATION_PERIOD_MS);
-
-  window.setTimeout(() => { app.reset(); }, ANIMATION_PERIOD_MS);
+app.update = function(inputData, outputData) {
+  console.log('Update!');
+  this.track.update(inputData, outputData, ANIMATION_PERIOD_MS);
+  window.setTimeout(() => {
+    app.update(inputData, outputData);
+  }, ANIMATION_PERIOD_MS);
 };
 
 window.onload = (ev) => {
-  console.log('Document loaded!');
   app.start();
 };

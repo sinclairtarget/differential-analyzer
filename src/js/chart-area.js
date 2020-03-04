@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import * as util from './util.js';
+import * as util from './util';
 
 /*
  * The background for a chart/graph. Draws axes and grid lines.

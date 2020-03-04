@@ -4,10 +4,10 @@ import Dimensions from './dimensions';
 import ChartArea from './chart-area';
 
 const MARGIN = {
-  top: 12,
-  right: 12,
-  bottom: 12,
-  left: 12
+  top: 20,
+  right: 40,
+  bottom: 0,
+  left: 0
 };
 
 const PADDING = {
