@@ -5,11 +5,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg878"
+   preserveAspectRatio="xMidYMid meet"
+   id="diagram"
    version="1.1"
-   viewBox="0 0 297 158.75"
+   viewBox="0 0 1200 600"
    height="600"
-   width="1122.5197">
+   width="100%">
   <defs
      id="defs872" />
   <metadata
@@ -25,18 +26,36 @@
     </rdf:RDF>
   </metadata>
   <g
+     id="layer2">
+    <rect
+       y="49.466862"
+       x="478.81232"
+       height="228.29448"
+       width="226.27417"
+       id="rect994"
+       style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
+  </g>
+  <g
      transform="translate(0,-138.25)"
      id="layer1">
     <ellipse
-       ry="45.735123"
-       rx="48.947918"
-       cy="221.40475"
-       cx="146.84375"
+       transform="rotate(13.048485)"
+       ry="71.345848"
+       rx="76.357742"
+       cy="163.53418"
+       cx="644.13867"
        id="path1436"
-       style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:0.52916667;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
+       style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
     <path
-       id="path1442"
-       d="M 147.59971,267.13989 V 248.61905"
-       style="fill:none;stroke:#ffffff;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       transform="rotate(-2.3195215,2329.9078,395.2526)"
+       d="m 603.06105,304.3895 -19.64358,-0.78061 10.49781,-16.62153 z"
+       id="path1014"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
+    <circle
+       r="1.8940361"
+       cy="305.64319"
+       cx="590.78998"
+       id="path1016"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1" />
   </g>
 </svg>

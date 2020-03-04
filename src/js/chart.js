@@ -54,7 +54,7 @@ export default class Chart {
                       .x((d) => this.xScale(d.x))
                       .y((d) => this.yScale(d.y));
 
-    let dataToPlot = this.cullData(data, this.xInterval, this.yInterval);
+    let dataToPlot = this.clipData(data, this.xInterval, this.yInterval);
 
     if (this.path == null) {
       this.path = this.area.plot.append('path')
@@ -74,7 +74,7 @@ export default class Chart {
     }
   }
 
-  cullData(data, xInterval, yInterval) {
+  clipData(data, xInterval, yInterval) {
     return data.filter(d => {
       return d.y >= yInterval[0] && d.y <= yInterval[1]
         && d.x >= xInterval[0] && d.x <= xInterval[1]

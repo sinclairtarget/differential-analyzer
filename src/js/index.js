@@ -1,6 +1,7 @@
 import "../scss/main.scss";
 
 import * as d3 from 'd3';
+import SVGInject from '@iconfu/svg-inject';
 import Chart from './chart';
 import * as machine from './machine';
 
@@ -11,8 +12,8 @@ const ANIMATION_PERIOD_MS = 15000;
 
 const app = window.app = {
   root: null,
-  input: new Chart(0, 0, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 10]),
-  output: new Chart(CHART_WIDTH, 0, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 600]),
+  input: new Chart(0, 300, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 10]),
+  output: new Chart(CHART_WIDTH + 40, 300, CHART_WIDTH, CHART_HEIGHT, [0, 100], [0, 600]),
   F_data: null
 };
 
@@ -22,11 +23,21 @@ function F(x) {
 
 app.start = function() {
   console.log('App started!');
-  this.setUp();
+
+  // Inject the SVG directly into the document so we can style it
+  SVGInject(document.querySelector('img.injectable'), {
+    afterInject: () => {
+      this.setUp();
+    },
+    onFail: () => {
+      console.error('Failed to inject SVG.');
+    }
+  });
 };
 
 app.setUp = function() {
-  this.root = d3.select('#svg-box');
+  this.root = d3.select('#diagram');
+  console.log(this.root);
   this.input.setUp(this.root);
   this.output.setUp(this.root);
 
