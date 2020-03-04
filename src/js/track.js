@@ -7,16 +7,14 @@ const CHART_WIDTH = 400;
 const CHART_HEIGHT = 260;
 const FUDGE = 10;
 
-const INPUT_Y_INTERVAL = [0, 10];
-
 // Represents the track or conveyor the input and output charts are mounted
 // on.
 export default class Track {
-  constructor(x, y) {
+  constructor(x, y, yInterval) {
     this.x = x;
     this.y = y;
     this.input = new Chart(0, 0, CHART_WIDTH, CHART_HEIGHT,
-                           [0, 100], INPUT_Y_INTERVAL, 'f(x)');
+                           [0, 100], yInterval, 'f(x)');
     this.output = new Chart(CHART_WIDTH, 0, CHART_WIDTH, CHART_HEIGHT,
                             [0, 100], [0, 600], 'F(x)');
 
@@ -25,7 +23,7 @@ export default class Track {
 
     this.inputEye = new Eye(CHART_WIDTH - this.output.dim.margin.left -
                             this.output.dim.padding.left,
-                            -8, INPUT_Y_INTERVAL, this.input.dim.plotHeight());
+                            -8, yInterval, this.input.dim.plotHeight());
   }
 
   setUp(parent) {

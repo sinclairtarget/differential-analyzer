@@ -30,35 +30,12 @@ export default class Eye {
             .attrTween('transform', () => {
               // Custom interpolate to get eye to travel along function
               return (t) => {
-                return this.interpolate(inputData, t);
+                return util.interpolate(inputData, (d) => this.pos(d), t);
               }
             });
   }
 
   pos(d) {
     return { x: this.x, y: this.y - this.yScale(d.y) };
-  }
-
-  interpolate(inputData, t) {
-    let len = inputData.length;
-    let index = Math.min(Math.floor(t * len), len - 1);
-    let indexNext = index;
-    if (index < inputData.length - 1)
-      indexNext = index + 1;
-
-    let t1 = index / inputData.length;
-    let t2 = indexNext / inputData.length;
-    let tdiff = 0;
-    if (t1 != t2)
-      tdiff = (t - t1) / (t2 - t1);
-
-    let pos1 = this.pos(inputData[index]);
-    let pos2 = this.pos(inputData[indexNext]);
-    return util.transl(pos1.x, pos1.y + tdiff * (pos2.y - pos1.y));
-  }
-
-  pairForTime(inputData, t) {
-    let len = inputData.length;
-    let index = Math.min(Math.floor(t * len), len - 1);
   }
 }
