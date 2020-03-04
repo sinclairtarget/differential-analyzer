@@ -68,7 +68,7 @@ export default class Chart {
     if (animDuration > 0) {
       let len = this.path.node().getTotalLength();
       this.path.attr('stroke-dasharray', len + ' ' + len)
-               .attr('stroke-dashoffset', len)
+               .attr('stroke-dashoffset', len - 7)
                .interrupt()
                .transition()
                .duration(animDuration)

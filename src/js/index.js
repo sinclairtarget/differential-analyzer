@@ -10,10 +10,11 @@ const ANIMATION_PERIOD_MS = 15000;
 const LOOP_DELAY_MS = 1000;
 
 const INPUT_Y_INTERVAL = [0, 10];
+const OUTPUT_Y_INTERVAL = [0, 600];
 
 const app = window.app = {
   root: null,
-  track: new Track(0, 280, INPUT_Y_INTERVAL),
+  track: new Track(0, 280, INPUT_Y_INTERVAL, OUTPUT_Y_INTERVAL),
   turntable: new Turntable(0, -138, INPUT_Y_INTERVAL),
   f_data: null,
   F_data: null

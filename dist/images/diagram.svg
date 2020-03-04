@@ -63,6 +63,7 @@
            x="811.68945">Output</tspan></tspan></text>
   </g>
   <g
+     style="display:inline"
      class="input-eye"
      id="input-eye">
     <path
@@ -268,5 +269,19 @@
        width="10.647369"
        id="rect4159"
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.30787361;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
+  <g
+     class="output-eye"
+     id="layer8">
+    <path
+       id="path1358-2"
+       d="M 10.235087,223.25296 10.507777,-0.39581242"
+       style="fill:#b3b3b3;stroke:#cccccc;stroke-width:2.20238137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686" />
+    <circle
+       r="5.4551821"
+       cy="228.21428"
+       cx="10.000142"
+       id="path4369"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.80392158;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
   </g>
 </svg>

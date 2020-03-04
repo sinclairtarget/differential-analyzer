@@ -63,11 +63,11 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="586.34786"
-     inkscape:cy="425.21808"
+     inkscape:zoom="5.6"
+     inkscape:cx="62.383073"
+     inkscape:cy="364.6333"
      inkscape:document-units="px"
-     inkscape:current-layer="layer7"
+     inkscape:current-layer="layer8"
      showgrid="true"
      units="px"
      showguides="true"
@@ -165,6 +165,7 @@
      id="input-eye"
      inkscape:label="InputEye"
      class="input-eye"
+     style="display:inline"
      sodipodi:insensitive="true">
     <path
        style="fill:#b3b3b3;stroke:#cccccc;stroke-width:2.20238137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686"
@@ -472,5 +473,23 @@
        height="8.9965763"
        x="785.66406"
        y="170.50171" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="OutputEye"
+     class="output-eye">
+    <path
+       style="fill:#b3b3b3;stroke:#cccccc;stroke-width:2.20238137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686"
+       d="M 10.235087,223.25296 10.507777,-0.39581242"
+       id="path1358-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.80392158;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4369"
+       cx="10.000142"
+       cy="228.21428"
+       r="5.4551821" />
   </g>
 </svg>

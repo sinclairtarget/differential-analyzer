@@ -10,20 +10,22 @@ const FUDGE = 10;
 // Represents the track or conveyor the input and output charts are mounted
 // on.
 export default class Track {
-  constructor(x, y, yInterval) {
+  constructor(x, y, inputYInterval, outputYInterval) {
     this.x = x;
     this.y = y;
     this.input = new Chart(0, 0, CHART_WIDTH, CHART_HEIGHT,
-                           [0, 100], yInterval, 'f(x)');
+                           [0, 100], inputYInterval, 'f(x)');
     this.output = new Chart(CHART_WIDTH, 0, CHART_WIDTH, CHART_HEIGHT,
-                            [0, 100], [0, 600], 'F(x)');
+                            [0, 100], outputYInterval, 'F(x)');
 
     this.baseGroup = null;
     this.chartGroup = null;
 
     this.inputEye = new Eye(CHART_WIDTH - this.output.dim.margin.left -
                             this.output.dim.padding.left,
-                            -8, yInterval, this.input.dim.plotHeight());
+                            -8, inputYInterval, this.input.dim.plotHeight());
+    this.outputEye = new Eye(2 * CHART_WIDTH - this.output.dim.padding.left,
+                             -8, outputYInterval, this.output.dim.plotHeight());
   }
 
   setUp(parent) {
@@ -38,7 +40,8 @@ export default class Track {
     this.input.setUp(this.chartGroup);
     this.output.setUp(this.chartGroup);
 
-    this.inputEye.setUp(this.baseGroup, parent);
+    this.inputEye.setUp(this.baseGroup, parent, 'g.input-eye');
+    this.outputEye.setUp(this.baseGroup, parent, 'g.output-eye');
   }
 
   update(inputData, outputData, duration) {
@@ -54,6 +57,7 @@ export default class Track {
     this.input.drawCurve(inputData);
     this.output.drawCurve(outputData, duration);
     this.inputEye.update(inputData, duration);
+    this.outputEye.update(outputData, duration);
   }
 
   startCoord() {
