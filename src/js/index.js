@@ -6,6 +6,7 @@ import * as machine from './machine';
 import Track from './track';
 
 const ANIMATION_PERIOD_MS = 15000;
+const LOOP_DELAY_MS = 1000;
 
 const app = window.app = {
   root: null,
@@ -49,7 +50,7 @@ app.update = function(inputData, outputData) {
   this.track.update(inputData, outputData, ANIMATION_PERIOD_MS);
   window.setTimeout(() => {
     app.update(inputData, outputData);
-  }, ANIMATION_PERIOD_MS);
+  }, ANIMATION_PERIOD_MS + LOOP_DELAY_MS);
 
 //  this.root.select('g.turntable')
 //           .attr('transform', 'rotate(0, 400, 200)')
