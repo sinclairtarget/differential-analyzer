@@ -5,6 +5,7 @@ import SVGInject from '@iconfu/svg-inject';
 import * as machine from './machine';
 import Track from './track';
 import Turntable from './turntable';
+import Wheel from './wheel';
 
 const ANIMATION_PERIOD_MS = 15000;
 const LOOP_DELAY_MS = 1000;
@@ -16,6 +17,7 @@ const app = window.app = {
   root: null,
   track: new Track(0, 280, INPUT_Y_INTERVAL, OUTPUT_Y_INTERVAL),
   turntable: new Turntable(0, -138, INPUT_Y_INTERVAL),
+  wheel: new Wheel(),
   f_data: null,
   F_data: null
 };
@@ -29,6 +31,7 @@ app.start = function() {
 
   // Inject the SVG directly into the document so we can style it
   SVGInject(document.querySelector('img.injectable'), {
+    makeIdsUnique: false,
     afterInject: () => {
       this.setUp();
     },
@@ -42,6 +45,7 @@ app.setUp = function() {
   this.root = d3.select('#diagram');
   this.track.setUp(this.root);
   this.turntable.setUp(this.root);
+  this.wheel.setUp(this.root);
 
   this.f_data = machine.stream_of_x(100).map(x => {
     return { x: x, y: F(x) }
@@ -56,6 +60,8 @@ app.update = function(inputData, outputData) {
   console.log('Update!');
   this.track.update(inputData, outputData, ANIMATION_PERIOD_MS);
   this.turntable.update(inputData, ANIMATION_PERIOD_MS);
+  this.wheel.update(outputData, ANIMATION_PERIOD_MS);
+
   window.setTimeout(() => {
     app.update(inputData, outputData);
   }, ANIMATION_PERIOD_MS + LOOP_DELAY_MS);

@@ -12,6 +12,24 @@ export function range(start, stop) {
                                     .map((x) => x + start - 1);
 }
 
+export function interpolateData(data, pos, t) {
+  let len = data.length;
+  let index = Math.min(Math.floor(t * len), len - 1);
+  let indexNext = index;
+  if (index < data.length - 1)
+    indexNext = index + 1;
+
+  let t1 = index / data.length;
+  let t2 = indexNext / data.length;
+  let tdiff = 0;
+  if (t1 != t2)
+    tdiff = (t - t1) / (t2 - t1);
+
+  let pos1 = pos(data[index]);
+  let pos2 = pos(data[indexNext]);
+  return { x: pos1.x, y: pos1.y + tdiff * (pos2.y - pos1.y) };
+}
+
 export function interpolate(inputData, pos, t) {
   let len = inputData.length;
   let index = Math.min(Math.floor(t * len), len - 1);

@@ -12,7 +12,30 @@
    height="600"
    width="100%">
   <defs
-     id="defs872" />
+     id="defs872">
+    <clipPath
+       id="clipPath4774"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="168.50446"
+         x="582.76782"
+         height="6.2946496"
+         width="16.607187"
+         id="rect4776"
+         style="display:inline;fill:#06ffff;fill-opacity:0.56227758;stroke:#19a5a5;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.83629892" />
+    </clipPath>
+    <clipPath
+       id="indicator-clip-path"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         style="display:inline;fill:#06ffff;fill-opacity:0.56227758;stroke:#19a5a5;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.83629892"
+         id="rect4834"
+         width="17.120535"
+         height="6.6517859"
+         x="582.41071"
+         y="168.28125" />
+    </clipPath>
+  </defs>
   <metadata
      id="metadata875">
     <rdf:RDF>
@@ -179,6 +202,7 @@
   <g
      id="layer4">
     <g
+       style="display:inline"
        id="layer7">
       <path
          id="path3975"
@@ -191,11 +215,6 @@
          width="16.235847"
          id="rect3935"
          style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.30790806;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <path
-         transform="matrix(1.3199656,0,0,-0.83939239,-189.02809,23.67703)"
-         d="m 591,-177 0.86603,1.5 0.86602,1.5 -1.73205,0 -1.73205,0 0.86602,-1.5 z"
-         id="path3937"
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <rect
          y="178.16995"
          x="589.5271"
@@ -215,6 +234,18 @@
          id="path3996"
          d="M 594.09597,179.50148 H 785.2042"
          style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <g
+         clip-path="url(#indicator-clip-path)"
+         clipPath=""
+         style="display:inline"
+         id="layer10">
+        <path
+           clip-path=""
+           class="wheel-triangle"
+           d="m 588.30357,169.01785 2.6327,-0.002 2.6327,-0.002 -1.31451,2.28104 -1.3145,2.28105 -1.31819,-2.27891 z"
+           id="path4730"
+           style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
     </g>
     <path
        id="path1139-7"
