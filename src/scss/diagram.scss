@@ -1,6 +1,6 @@
 @import 'colors';
 
-.chart-area {
+svg .chart-area {
     color: $chart-area-color;
 
     .grid {
@@ -12,4 +12,10 @@
         stroke-width: 2;
         fill: none;
     }
+}
+
+svg .eye {
+    stroke: $chart-curve-color;
+    stroke-width: 2;
+    fill: none;
 }

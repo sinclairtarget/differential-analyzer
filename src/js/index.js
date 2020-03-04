@@ -35,7 +35,7 @@ app.setUp = function() {
   this.root = d3.select('#diagram');
   this.track.setUp(this.root);
 
-  this.F_data = machine.stream_of_x(160).map(x => {
+  this.F_data = machine.stream_of_x(100).map(x => {
     return { x: x, y: F(x) }
   });
 
