@@ -85,11 +85,11 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="566.18235"
-     inkscape:cy="428.74375"
+     inkscape:zoom="1.979899"
+     inkscape:cx="490.03774"
+     inkscape:cy="225.03923"
      inkscape:document-units="px"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="layer5"
      showgrid="true"
      units="px"
      showguides="true"
@@ -153,19 +153,18 @@
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="Labels"
-     sodipodi:insensitive="true">
+     inkscape:label="Labels">
     <text
        xml:space="preserve"
-       x="297.42773"
+       x="293.42773"
        y="275.50391"
        id="text1600"
        class="label"><tspan
          sodipodi:role="line"
-         x="297.42773"
+         x="293.42773"
          y="275.50391"
          id="tspan1598"><tspan
-           x="297.42773"
+           x="293.42773"
            y="275.50391"
            id="tspan1596">Input</tspan></tspan></text>
     <text
@@ -339,7 +338,8 @@
        id="layer6"
        inkscape:label="Circle"
        style="display:inline"
-       class="disk">
+       class="disk"
+       sodipodi:insensitive="true">
       <circle
          style="display:inline;fill:#333333;fill-opacity:1;stroke:#ffffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.49220753;stroke-opacity:1"
          id="path1245"
