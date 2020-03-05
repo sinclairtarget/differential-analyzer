@@ -27,8 +27,6 @@ function F(x) {
 }
 
 app.start = function() {
-  console.log('App started!');
-
   // Inject the SVG directly into the document so we can style it
   SVGInject(document.querySelector('img.injectable'), {
     makeIdsUnique: false,
@@ -57,7 +55,6 @@ app.setUp = function() {
 };
 
 app.update = function(inputData, outputData) {
-  console.log('Update!');
   this.track.update(inputData, outputData, ANIMATION_PERIOD_MS);
   this.turntable.update(inputData, ANIMATION_PERIOD_MS);
   this.wheel.update(outputData, ANIMATION_PERIOD_MS);

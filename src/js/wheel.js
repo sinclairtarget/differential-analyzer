@@ -17,8 +17,6 @@ export default class Wheel {
     let rect = this.triangle.node().getBoundingClientRect();
     this.x = rect.x;
     this.y = rect.y;
-
-    console.log(this);
   }
 
   update(data, duration) {
