@@ -27,18 +27,43 @@ header ul {
 }
 
 main .title {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    margin: 12px auto 4rem auto;
+    padding: 0 20px;
+}
+
+main p {
+    padding: 0 20px;
 }
 
 div.intro {
     margin-bottom: 6rem;
 }
 
-div.container {
+div.diagram-background {
     background-color: $diagram-background-color;
-    height: 600px;
+}
+
+div.container {
+    height: 300px;
+    margin: auto;
+    max-width: 1200px;
+
+    @media (min-width: 500px) {
+        height: 400px;
+    }
+
+    @media (min-width: 860px) {
+        height: 500px;
+    }
+
+    @media (min-width: 1080px) {
+        height: 600px;
+    }
+
+    @media (min-width: 1400px) {
+        height: 720px;
+        max-width: 1400px;
+    }
 }
 
 div.container div.positioner {
@@ -48,7 +73,12 @@ div.container div.positioner {
 
 footer {
     padding: 3rem;
-    text-align: center;
+}
+
+footer p {
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 .icon {

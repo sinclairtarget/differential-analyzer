@@ -11,8 +11,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 6rem;
-    margin-bottom: 4rem;
+    font-size: 5rem;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+        font-size: 6rem;
+    }
 }
 
 header i {
@@ -44,11 +48,10 @@ a:hover {
 footer {
     font-size: 1.4rem;
     color: $faded-text-color;
+    text-align: center;
 }
 
 footer p {
-    line-height: 1.5;
-    max-width: $max-text-width;
-    margin: auto;
-    margin-bottom: 12px;
+    line-height: 1.8;
+    max-width: 0.8 * $max-text-width;
 }

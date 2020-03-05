@@ -10,13 +10,13 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="100%"
-   height="600"
+   height="100%"
    viewBox="0 0 1200 600"
    version="1.1"
    id="diagram"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="diagram.svg"
-   preserveAspectRatio="xMidYMid meet">
+   preserveAspectRatio="xMidYMid slice">
   <defs
      id="defs872">
     <inkscape:path-effect
@@ -55,6 +55,28 @@
        linejoin_type="extrp_arc"
        miter_limit="4"
        end_linecap_type="zerowidth" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4774">
+      <rect
+         style="display:inline;fill:#06ffff;fill-opacity:0.56227758;stroke:#19a5a5;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.83629892"
+         id="rect4776"
+         width="16.607187"
+         height="6.2946496"
+         x="582.76782"
+         y="168.50446" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="indicator-clip-path">
+      <rect
+         y="168.28125"
+         x="582.41071"
+         height="6.6517859"
+         width="17.120535"
+         id="rect4834"
+         style="display:inline;fill:#06ffff;fill-opacity:0.56227758;stroke:#19a5a5;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.83629892" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -63,18 +85,18 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="62.383073"
-     inkscape:cy="364.6333"
+     inkscape:zoom="44.8"
+     inkscape:cx="590.86173"
+     inkscape:cy="429.96466"
      inkscape:document-units="px"
-     inkscape:current-layer="layer8"
+     inkscape:current-layer="layer10"
      showgrid="true"
      units="px"
      showguides="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="1107"
      inkscape:window-maximized="1"
      inkscape:lockguides="true"
      inkscape:snap-object-midpoints="true"
@@ -359,7 +381,8 @@
     <g
        inkscape:groupmode="layer"
        id="layer7"
-       inkscape:label="Wheel">
+       inkscape:label="Wheel"
+       style="display:inline">
       <path
          style="fill:#ffffff;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 591,174.79481 V 178"
@@ -373,24 +396,6 @@
          height="5.9547825"
          x="582.94312"
          y="168.66617" />
-      <path
-         sodipodi:type="star"
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="path3937"
-         sodipodi:sides="3"
-         sodipodi:cx="591"
-         sodipodi:cy="-175"
-         sodipodi:r1="2"
-         sodipodi:r2="1"
-         sodipodi:arg1="-1.5707963"
-         sodipodi:arg2="-0.52359878"
-         inkscape:flatsided="false"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         d="m 591,-177 0.86603,1.5 0.86602,1.5 -1.73205,0 -1.73205,0 0.86602,-1.5 z"
-         inkscape:transform-center-y="0.41969627"
-         transform="matrix(1.3199656,0,0,-0.83939239,-189.02809,23.67703)"
-         inkscape:transform-center-x="9.0519627e-06" />
       <rect
          style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.71492702;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect3979"
@@ -411,6 +416,33 @@
          d="M 594.09597,179.50148 H 785.2042"
          id="path3996"
          inkscape:connector-curvature="0" />
+      <g
+         inkscape:groupmode="layer"
+         id="layer10"
+         inkscape:label="Indicator"
+         style="display:inline"
+         clipPath=""
+         clip-path="url(#indicator-clip-path)">
+        <path
+           sodipodi:type="star"
+           style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path4730"
+           sodipodi:sides="3"
+           sodipodi:cx="590.9375"
+           sodipodi:cy="170.53571"
+           sodipodi:r1="3.0399785"
+           sodipodi:r2="1.5199893"
+           sodipodi:arg1="-2.6188036"
+           sodipodi:arg2="-1.571606"
+           inkscape:flatsided="false"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="m 588.30357,169.01785 2.6327,-0.002 2.6327,-0.002 -1.31451,2.28104 -1.3145,2.28105 -1.31819,-2.27891 z"
+           inkscape:transform-center-x="0.0012307203"
+           inkscape:transform-center-y="0.75892857"
+           class="wheel-triangle"
+           clip-path="" />
+      </g>
     </g>
     <path
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.99922723px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -478,7 +510,8 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="OutputEye"
-     class="output-eye">
+     class="output-eye"
+     sodipodi:insensitive="true">
     <path
        style="fill:#b3b3b3;stroke:#cccccc;stroke-width:2.20238137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686"
        d="M 10.235087,223.25296 10.507777,-0.39581242"
