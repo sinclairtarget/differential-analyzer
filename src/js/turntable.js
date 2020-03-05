@@ -35,7 +35,7 @@ export default class Turntable {
                 }
               });
 
-    let [cx, cy] = [590, 303]; // Guesswork! (Should figure out how to do this)
+    let [cx, cy] = [591, 302]; // Guesswork! (Should figure out how to do this)
     this.disk.attr('transform', util.rot(0, cx, cy))
              .interrupt()
              .transition()
