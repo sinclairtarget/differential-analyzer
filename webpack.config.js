@@ -28,7 +28,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/*', '!images', '!images/**/*']
+      cleanOnceBeforeBuildPatterns: [
+        '**/*', '!images', '!images/**/*', '!fonts', '!fonts/**/*'
+      ]
     }),
     new MiniCssExtractPlugin({
       filename: 'main.[hash].css',
