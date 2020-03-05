@@ -45,3 +45,10 @@ footer {
     font-size: 1.4rem;
     color: $faded-text-color;
 }
+
+footer p {
+    line-height: 1.5;
+    max-width: $max-text-width;
+    margin: auto;
+    margin-bottom: 12px;
+}

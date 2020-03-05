@@ -24,34 +24,50 @@
     <main>
       <div class="intro">
         <h1 class="title">The Differential Analyzer</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas erat
-        imperdiet sed euismod nisi porta lorem mollis. Hendrerit gravida rutrum
-        quisque non tellus orci ac auctor augue. At consectetur lorem donec
-        massa. Eros in cursus turpis massa tincidunt dui ut. Egestas purus
-        viverra accumsan in nisl nisi scelerisque. Neque volutpat ac tincidunt
-        vitae semper quis lectus nulla. Dui faucibus in ornare quam viverra orci
-        sagittis eu volutpat. Congue nisi vitae suscipit tellus mauris. Dui
-        vivamus arcu felis bibendum ut tristique et egestas. Dolor sed viverra
-        ipsum nunc aliquet bibendum. Mattis enim ut tellus elementum sagittis
-        vitae et. Facilisis mauris sit amet massa vitae tortor condimentum.
-        Ullamcorper a lacus vestibulum sed arcu non odio euismod. Neque sodales
-        ut etiam sit amet.</p>
-        <p>Habitasse platea dictumst quisque sagittis purus. Nisl vel pretium
-        lectus quam id leo in. Neque volutpat ac tincidunt vitae semper quis.
-        Blandit cursus risus at ultrices mi. In aliquam sem fringilla ut morbi
-        tincidunt augue interdum. Imperdiet massa tincidunt nunc pulvinar sapien.
-        Vitae suscipit tellus mauris a diam maecenas sed enim ut. Pellentesque id
-        euismod elementum. Phasellus faucibus scelerisque eleifend donec pretium
-        vulputate sapien nec. Id faucibus nisl tincidunt eget nullam. Dictum
-        varius duis at consectetur lorem donec massa sapien.</p>
+        <p>The differential analyzer was an analog computer invented between
+        1928 and 1931 by Vannevar Bush, then a professor of engineering at MIT.
+        The machine was built to solve differential equations, which are often
+        used in engineering and physics to model the behavior of complex
+        systems. Some differential equations are trivial to solve, but others
+        cannot be solved by hand at all.</p>
+        <p>The differential analyzer solved differential equations by
+        numerically approximating them. The machine could do this even though
+        it contained no electronic circuits, logic gates, or anything else that
+        we might associate with a digital computer. It relied instead on the
+        interplay of various mechanical moving parts to compute results.</p>
+        <p>The most important part of the differential analyzer was the
+        mechanical integrator. Below is a visualization of how the mechanical
+        integrator worked. The visualization shows just one mechanical
+        integrator, but the differential analyzer built by Bush actually had
+        six—this allowed Bush to solve numerical equations of up to the sixth
+        order. The final output produced by the differential analyzer
+        was always a combination of the outputs of the integrators: each
+        individual integrator's output was either fed into the next integrator
+        as input, added to the output the next integrator, or subtracted from
+        the output of the next integrator. Combining the outputs of the
+        integrators was an engineering challenge that Bush was the first to
+        overcome, but the integrators are where the magic happened; they did the
+        real work of solving the equations.</p>
+        <p>A mechanical integrator is basically a fancy summing machine. Its
+        output is a graph of how many times a particular small wheel has
+        revolved. The rate at which this wheel revolves is determined by a
+        large spinning disk that drives the wheel. The disk can be displaced so
+        that the wheel moves closer or further away from the center of the
+        disk—the further away the wheel is from the center, the faster it
+        spins. The operator of the machine would trace another graph as input
+        to the machine and this input would control the displacement of the
+        wheel.</p>
+        <p>If you'd like to know more about the differential analyzer, I hope
+        you take a look at my <a href="#">blog post</a> about it, which this
+        visualization was created to accompany.</p>
       </div>
       <div class="container">
         <img src="/images/diagram.svg" class="injectable"/>
       </div>
     </main>
     <footer>
-      <p>This visualization was created for a blog post that you can find
+      <p>My name is Sinclair Target. I like to write about the history of
+      computing<br/> on my blog, which you can find
         <a href="https://twobithistory.org">here</a>.
       </p>
       <a href="https://github.com">
