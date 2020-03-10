@@ -26,8 +26,8 @@ export default class Wheel {
                  .transition()
                  .duration(duration)
                  .ease((t) => {
-                   let d = util.interpolateData(data, (d) => d, t);
-                   return d.y / maxY;
+                   let [x, y] = util.interpolateData(data, t);
+                   return y / maxY;
                  })
                  .attrTween('transform', () => {
                    return (t) => {

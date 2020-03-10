@@ -13,17 +13,19 @@ export default class Turntable {
 
     this.turntable = null;
     this.disk = null;
+    this.data = null;
   }
 
-  setUp(parent) {
+  setUp(parent, data) {
     this.turntable = parent.select('g.turntable')
                            .attr('transform', util.transl(this.x, this.y));
 
     this.disk = this.turntable.select('g.disk');
+    this.data = data.map((d) => this.pos(d));
   }
 
-  update(inputData, duration) {
-    let startPos = this.pos(inputData[0]);
+  update(duration) {
+    let startPos = this.data[0];
     this.turntable.attr('transform', util.transl(startPos.x, startPos.y))
               .interrupt()
               .transition()
@@ -31,7 +33,7 @@ export default class Turntable {
               .ease(d3.easeLinear)
               .attrTween('transform', () => {
                 return (t) => {
-                  return util.interpolate(inputData, (d) => this.pos(d), t);
+                  return util.interpolate(this.data, t);
                 }
               });
 

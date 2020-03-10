@@ -22,7 +22,7 @@ const app = window.app = {
   F_data: null
 };
 
-function F(x) {
+function f(x) {
   return 5 * Math.sin((Math.PI/25) * x) + 5;
 }
 
@@ -41,22 +41,22 @@ app.start = function() {
 
 app.setUp = function() {
   this.root = d3.select('#diagram');
-  this.track.setUp(this.root);
-  this.turntable.setUp(this.root);
-  this.wheel.setUp(this.root);
 
   this.f_data = machine.stream_of_x(100).map(x => {
-    return { x: x, y: F(x) }
+    return { x: x, y: f(x) }
   });
 
   this.F_data = machine.integrate(this.f_data);
 
+  this.track.setUp(this.root, this.f_data, this.F_data);
+  this.turntable.setUp(this.root, this.f_data);
+  this.wheel.setUp(this.root);
   app.update(this.f_data, this.F_data);
 };
 
 app.update = function(inputData, outputData) {
   this.track.update(inputData, outputData, ANIMATION_PERIOD_MS);
-  this.turntable.update(inputData, ANIMATION_PERIOD_MS);
+  this.turntable.update(ANIMATION_PERIOD_MS);
   this.wheel.update(outputData, ANIMATION_PERIOD_MS);
 
   window.setTimeout(() => {

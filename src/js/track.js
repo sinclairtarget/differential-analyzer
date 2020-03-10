@@ -28,7 +28,7 @@ export default class Track {
                              -8, outputYInterval, this.output.dim.plotHeight());
   }
 
-  setUp(parent) {
+  setUp(parent, inputData, outputData) {
     this.baseGroup = parent.insert('g', ':first-child')
                            .attr('transform', util.transl(this.x, this.y));
 
@@ -40,8 +40,8 @@ export default class Track {
     this.input.setUp(this.chartGroup);
     this.output.setUp(this.chartGroup);
 
-    this.inputEye.setUp(this.baseGroup, parent, 'g.input-eye');
-    this.outputEye.setUp(this.baseGroup, parent, 'g.output-eye');
+    this.inputEye.setUp(this.baseGroup, parent, 'g.input-eye', inputData);
+    this.outputEye.setUp(this.baseGroup, parent, 'g.output-eye', outputData);
   }
 
   update(inputData, outputData, duration) {
@@ -56,8 +56,8 @@ export default class Track {
 
     this.input.drawCurve(inputData);
     this.output.drawCurve(outputData, duration);
-    this.inputEye.update(inputData, duration);
-    this.outputEye.update(outputData, duration);
+    this.inputEye.update(duration);
+    this.outputEye.update(duration);
   }
 
   startCoord() {

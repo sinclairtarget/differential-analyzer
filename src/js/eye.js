@@ -12,16 +12,19 @@ export default class Eye {
                     .domain(this.yInterval)
                     .range([0, plotHeight]);
     this.eye = null;
+    this.data = null;
   }
 
-  setUp(parent, doc, selector) {
+  setUp(parent, doc, selector, data) {
     parent.node().appendChild(doc.node().querySelector(selector));
     this.eye = parent.select(selector)
                      .attr('transform', util.transl(this.x, this.y));
+
+    this.data = data.map((d) => this.pos(d));
   }
 
-  update(data, duration) {
-    let startPos = this.pos(data[0]);
+  update(duration) {
+    let startPos = this.data[0];
     this.eye.attr('transform', util.transl(startPos.x, startPos.y))
             .interrupt()
             .transition()
@@ -30,7 +33,7 @@ export default class Eye {
             .attrTween('transform', () => {
               // Custom interpolate to get eye to travel along function
               return (t) => {
-                return util.interpolate(data, (d) => this.pos(d), t);
+                return util.interpolate(this.data, t);
               }
             });
   }
