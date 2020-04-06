@@ -10,5 +10,11 @@ $ yarn install
 $ yarn serve
 ```
 
+## Deployment
+```
+$ yarn build
+$ ./deploy.sh
+```
+
 ## Demo
 ![](demo.gif)
